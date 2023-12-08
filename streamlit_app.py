@@ -1,5 +1,6 @@
 import streamlit
 import pandas
+
 streamlit.title('My Parent New Healthy Diner')
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Bluebarry Oatmeal')
@@ -17,5 +18,5 @@ Fruit_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.ind
 
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
-# Display the table on the page.
+# Display the table on the page
 streamlit.dataframe(fruits_to_show)
