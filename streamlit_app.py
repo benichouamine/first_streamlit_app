@@ -18,3 +18,10 @@ fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.in
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page
 streamlit.dataframe(fruits_to_show)
+
+
+
+#New Section to display fuityvice api response
+import requests
+fruityvice_responce = requests.get("https://fuityvice.com/api/fuit/watermelon")
+streamlit.text(fruityvice_response)
